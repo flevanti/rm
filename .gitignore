@@ -1,0 +1,4 @@
+.idea
+dockerdata/*
+!dockerdata/.keep
+
