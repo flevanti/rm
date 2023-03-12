@@ -7,8 +7,8 @@ import (
 	"github.com/go-sql-driver/mysql"
 	_ "github.com/go-sql-driver/mysql"
 	"os"
-	"rm/pkg/crawl"
 	"rm/pkg/refresh"
+	"rm/pkg/scrape/rm"
 	"strings"
 	"time"
 )
@@ -46,8 +46,8 @@ func main() {
 }
 
 func importRM() {
-	crawl.Postcode("CB74PL")
-	fmt.Println("IMPORT COMPLETED")
+	result := rm.Postcode("CB74PL")
+	fmt.Println(result)
 }
 
 func closeConnection() {
